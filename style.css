@@ -1,0 +1,31 @@
+html
+{
+    font-size:20px;
+    background-color: #79E0DB;
+    font-family: "Cormorant";
+}
+
+body
+{
+  margin:0;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #7A8B8B;
+}
+
+header h1
+{
+  font-family: "Rubik Bubbles";
+  font-weight:100;
+}
+
+.banner
+{
+    background-image: url('snowcity.jpg');
+    background-size: cover;
+    height: 900px;
+}
