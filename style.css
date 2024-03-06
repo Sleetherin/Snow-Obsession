@@ -22,12 +22,11 @@ header
 header h1
 {
   font-family: "Rubik Bubbles";
-  font-weight:100;
 }
 
 .banner
 {
-  background-image: url('snowcity.jpg');
+  background-image: url('photos/snowcity.jpg');
   background-size: cover;
   height: 600px;
   padding-top:350px;
