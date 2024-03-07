@@ -8,20 +8,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&family=Rubik+Bubbles&display=swap" 
 rel="stylesheet">
-    <title>Snow Club</title>
+    <title>SNOW OBSESSION</title>
 </head>
 <body>
-    <header>
-       <h1><a>Events</a></h1>
-       <h1><a>Members</a></h1>
-       <h1><a>Competitions</a></h1>
-       <h1><a>Announcements</a></h1>
-       <h1><a>History</a></h1>
-    </header>
+    <div id="snow">
+    
     <div class="banner">
-       <h1>SNOW CLUB</h1>
-       <h3>Opened only during snowtime, but you can get registed anytime!</h3>
-       <button class="register">Register</button>
+       <h1>Chionophile</h1>
+       <h3>A lover of snow and cold winter!</h3>
+       <button onclick="snow()" id="snow_button">Make it snow</button>
     </div>
     <div class="quote_banner">
        <h1>“Silently, like thoughts that come and go, the snowflakes fall, each one a gem.” — William Hamilton Gibson</h1>
@@ -35,10 +30,39 @@ rel="stylesheet">
         <img src="photos/photo6.jpg" />
         <img src="photos/photo7.jpg" />
         <img src="photos/photo8.jpg" />
-        <img src="photos/photo9.jpg" />
+        
     </div>
+
     <footer>
-        <h4>&copy; Snow Club &copy;</h4>
+        <h4>&copy; Photos by Unsplash & Website by Parta Cana &copy;</h4>
     </footer>
+    </div>
 </body>
+<script>
+
+    function snow()
+    {   
+        const snow = document.getElementById("snow"); 
+        const snowButton = document.getElementById("snow_button");
+        snow.style.backgroundImage= "url('photos/snow.png')";
+        snowButton.style.backgroundColor = "#2C2036";
+        snowButton.style.color = "#fff";
+        snowButton.innerHTML = "Stop snowing";
+        snowButton.removeEventListener('click', snow);
+        snowButton.addEventListener('click', stopSnow);
+    }
+
+    function stopSnow()
+    {
+        const snow = document.getElementById("snow"); 
+        const snowButton = document.getElementById("snow_button");
+        snowButton.style.backgroundColor = "#B279E0";
+        snowButton.style.color = "#000";
+        snowButton.innerHTML = "make it snow";
+        snow.style.backgroundImage= "";
+        snowButton.removeEventListener('click', stopSnow);
+        snowButton.addEventListener('click', snow);
+    }
+
+</script>
 </html>

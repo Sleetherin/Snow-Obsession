@@ -1,6 +1,7 @@
 html
 {
     font-size:20px;
+    background-repeat: repeat;
     background-color: #79E0DB;
     font-family: "Cormorant";
 }
@@ -10,18 +11,35 @@ body
   margin:0;
 }
 
-
-header
+#snow
 {
-    display: flex;
-    justify-content: space-around;
-    background-color: #7A8B8B;
-    border-bottom:1px dashed #B279E0;;
+  background-image: none;
+  animation: snow 8s linear infinite;
+  opacity: 1;
 }
-
-header h1
+@keyframes snow 
 {
-  font-family: "Rubik Bubbles";
+  0%{
+    background-position: 50px 50px;
+  }
+  20%{
+    background-position: 100 px 100px;
+  }
+  30%{
+    background-position: 150px 150px;
+  }
+  40%{
+    background-position: 200px 200px;
+  }
+  60%{
+    background-position: 250px 250px;
+  }
+  80%{
+    background-position: 300px 300px;
+  }
+  100%{
+    background-position: 350px 350px;
+  }
 }
 
 .banner
@@ -31,9 +49,11 @@ header h1
   height: 600px;
   padding-top:350px;
   text-align: center;
+  opacity: 0.7;
 }
 
-.banner button
+
+#snow_button
 {
    width:120px;
    height:40px;
@@ -43,25 +63,11 @@ header h1
    border: 3px dashed;
 }
 
-button:hover
+#snow_button:hover
 {
-  background-color: #D8E079;
+  background-color: #79E0DC;
 }
 
-@media only screen and (max-width: 600px) {
-   header
-   {
-     display:flex;
-     flex-direction: column;
-     text-align: center;
-     justify-content: space-between;
-   }
-
-   header h1 
-   {
-     margin-bottom: 15px;
-   }
-}
 
 a:hover
 {
@@ -81,8 +87,9 @@ a:hover
    display: flex;
    justify-content: center;
    flex-wrap: wrap;
-   background-color: #E09D79;
+   background-color: #000;
    padding: 30px 15px;
+   opacity: 0.8;
 }
 
 .photos img
@@ -90,10 +97,11 @@ a:hover
   width:400px;
   height:400px;
   margin:15px;
-  border: 3px dashed #7A8B8B;
+  border-radius: 5%;
+  border: 1px solid #fff;
+  box-shadow: 5px 8px 15px 5px black;
 }
 
 footer{
    font-size: 1rem;
-   border-top: 5px dashed #D8E079;
 }
